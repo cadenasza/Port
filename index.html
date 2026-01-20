@@ -1,11 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>Leonardo Cadena | Desenvolvedor Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/build/index.min.js"></script>
 </head>
 <body>
-    
+    <!-- ===== NAVEGAÇÃO ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="btn-tema" class="btn-control" title="Alternar tema">
+                    <span class="icon-tema">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== SEÇÃO HERO ===== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <span class="hero-label">Bem-vindo ao meu portfólio</span>
+                    <h1 class="hero-title">Leonardo Cadena</h1>
+                    <p class="hero-description">Desenvolvedor Web Júnior. Transformo ideias em soluções web eficientes, utilizando as melhores práticas de desenvolvimento.</p>
+                    <div class="hero-cta">
+                        <a href="#sobre" class="btn btn-primary">Conheça Meu Trabalho</a>
+                        <a href="#contato" class="btn btn-outline">Entre em Contato</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-shape">
+                        <img src="img/leo-12.jpeg" alt="Leonardo Cadena" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO SOBRE ===== -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>Sou um Desenvolvedor Web Júnior com experiência prática no desenvolvimento de aplicações web fullstack. 
+                    Possuo domínio em tecnologias como ASP.NET, C#, Vue.js e JavaScript, com foco em criação de soluções 
+                    eficientes e escaláveis.</p>
+                    <p>Meu perfil é analítico, organizado e colaborativo, com dedicação à qualidade de código e melhoria contínua. 
+                    Tenho experiência em integração com APIs REST, bancos de dados SQL e ferramentas de busca como Elasticsearch.</p>
+                    <p>Sou formado em Análise e Desenvolvimento de Sistemas pela FIAP e possuo intermediário de inglês.</p>
+                </div>
+                <div class="sobre-info">
+                    <div class="info-item">
+                        <strong>Localização</strong>
+                        <p>São Paulo - SP</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Telefone</strong>
+                        <p>(11) 93383-9709</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email</strong>
+                        <p>leonardocadenasza@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO PROJETOS ===== -->
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-grid">
+                <!-- Projeto 1 - NutriBreak API -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="img/NutriBreak.JPG" alt="NutriBreak API">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>NutriBreak API</h3>
+                        <p>Plataforma para promover saúde física e mental no trabalho com pausas inteligentes e cardápios equilibrados. Inclui recomendações baseadas em humor e energia.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">.NET 8</span>
+                            <span class="tag">ASP.NET Core</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">OpenTelemetry</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/cadenasza/NutriBreak" target="_blank" class="link-btn">Código</a>
+                            <button class="link-btn" onclick="abrirModal('nutribreak')">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 2 - Pokedex -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pokedex" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Pokedex</h3>
+                        <p>Aplicação web interativa que consome a PokeAPI para exibir informações detalhadas sobre Pokémons. Desenvolvido com metodologia Mobile First e Grid Layout, proporcionando uma experiência fluida em qualquer dispositivo.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PokeAPI</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/cadenasza/dio-pokedex" target="_blank" class="link-btn">Código</a>
+                            <button class="link-btn" onclick="abrirModal('pokedex')">Detalhes</button>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Projeto 3 - MaisAbrigo API -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="img/api.png" alt="MaisAbrigo API">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>MaisAbrigo API</h3>
+                        <p>Sistema completo para gerenciamento de abrigos e pessoas resgatadas em emergências. Integra IoT com sensores de ocupação e temperatura, dashboard em tempo real e API REST para Defesa Civil.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">ASP.NET Core</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Oracle</span>
+                            <span class="tag">Node-RED</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/cadenasza/MaisAbrigo" target="_blank" class="link-btn">Código</a>
+                            <button class="link-btn" onclick="abrirModal('maisabrigo')">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projetos-cta">
+                <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Ver Mais no GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO SKILLS ===== -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <!-- Back-End -->
+                <div class="skill-category">
+                    <h3>Back-End</h3>
+                    <ul class="skill-list">
+                        <li>C#</li>
+                        <li>ASP.NET</li>
+                        <li>APIs REST</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+
+                <!-- Front-End -->
+                <div class="skill-category">
+                    <h3>Front-End</h3>
+                    <ul class="skill-list">
+                        <li>JavaScript</li>
+                        <li>Vue.js</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+
+                <!-- Ferramentas & Outros -->
+                <div class="skill-category">
+                    <h3>Ferramentas & Outros</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Elasticsearch</li>
+                        <li>VS Code</li>
+                        <li>Excel & Word</li>
+                        <li>Inglês Intermediário</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Resolução de Problemas</li>
+                        <li>Trabalho em Equipe</li>
+                        <li>Adaptabilidade</li>
+                        <li>Proatividade</li>
+                        <li>Flexibilidade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO CONTATO ===== -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p class="contato-subtitle">Vamos conversar sobre oportunidades e projetos interessantes!</p>
+            
+            <div class="contato-content">
+                <form class="formulario" id="formulario-contato">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    <div id="mensagem-status"></div>
+                </form>
+
+                <div class="contato-links">
+                    <h3>Conecte-se Comigo</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/leonardo-cadena" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/cadenasza" target="_blank" class="social-link">GitHub</a>
+                        <a href="https://wa.me/5511933839709" target="_blank" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAIS ===== -->
+    <!-- Modal NutriBreak -->
+    <div id="modal-nutribreak" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal('nutribreak')">&times;</button>
+            <div class="modal-header">
+                <h2>NutriBreak API</h2>
+                <p class="modal-subtitle">Plataforma de Saúde no Trabalho</p>
+            </div>
+            <div class="modal-body">
+                <h3>🎯 Objetivo</h3>
+                <p>Apoiar profissionais com registros de usuários, refeições e pausas, além de recomendações inteligentes baseadas em humor, nível de energia e tempo de tela.</p>
+                
+                <h3>🛠 Tecnologias</h3>
+                <ul>
+                    <li><strong>.NET 8 / ASP.NET Core Web API</strong></li>
+                    <li><strong>Entity Framework Core</strong> com SQL Server</li>
+                    <li><strong>API Versioning</strong> (v1, v2)</li>
+                    <li><strong>OpenTelemetry</strong> para tracing e métricas</li>
+                    <li><strong>Swagger</strong> com versionamento</li>
+                    <li><strong>HATEOAS + Paginação</strong></li>
+                    <li><strong>Testes</strong> com xUnit</li>
+                </ul>
+
+                <div class="modal-actions">
+                    <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Acessar GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pokedex -->
+    <div id="modal-pokedex" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal('pokedex')">&times;</button>
+            <div class="modal-header">
+                <h2>Pokedex</h2>
+                <p class="modal-subtitle">Projeto Curso DIO - Enciclopédia Pokémon Interativa</p>
+            </div>
+            <div class="modal-body">
+                <h3>🎯 Objetivo do Projeto</h3>
+                <p>Criar uma Pokedex interativa e responsiva que consome dados da <strong>PokeAPI</strong> (REST API oficial de Pokémon), permitindo aos usuários explorar informações detalhadas sobre diferentes Pokémons de forma intuitiva e visual.</p>
+                <p>O projeto foi desenvolvido seguindo as melhores práticas de desenvolvimento web moderno, com foco especial em responsividade e experiência do usuário em dispositivos móveis.</p>
+                
+                <h3>🛠 Tecnologias Utilizadas</h3>
+                <ul>
+                    <li><strong>HTML5</strong> - Estrutura semântica e acessível</li>
+                    <li><strong>CSS3</strong> - Estilização moderna com Grid Layout</li>
+                    <li><strong>JavaScript</strong> - Lógica de consumo da API e interatividade</li>
+                    <li><strong>PokeAPI</strong> - API REST oficial para dados dos Pokémons</li>
+                </ul>
+
+                <h3>📐 Metodologias e Conceitos</h3>
+                <ul>
+                    <li><strong>Mobile First</strong> - Design pensado primeiro para dispositivos móveis, garantindo uma experiência otimizada em telas pequenas</li>
+                    <li><strong>CSS Grid Layout</strong> - Sistema de layout bidimensional para organização dos cards de Pokémons de forma responsiva</li>
+                    <li><strong>Responsive Design</strong> - Adaptação perfeita para diferentes tamanhos de tela (mobile, tablet, desktop)</li>
+                    <li><strong>API REST Integration</strong> - Consumo assíncrono de dados externos</li>
+                </ul>
+
+                <h3>✨ Funcionalidades Principais</h3>
+                <ul>
+                    <li>Listagem dinâmica de Pokémons com cards visuais</li>
+                    <li>Exibição de informações como nome, tipo e número da Pokedex</li>
+                    <li>Design responsivo que se adapta a qualquer dispositivo</li>
+                    <li>Interface colorida e intuitiva seguindo a identidade visual Pokémon</li>
+                    <li>Carregamento assíncrono de dados da PokeAPI</li>
+                    <li>Grid layout flexível para organização dos elementos</li>
+                </ul>
+
+                <h3>🎓 Aprendizados</h3>
+                <p>Este projeto foi desenvolvido como parte do curso da <strong>Digital Innovation One (DIO)</strong>, proporcionando conhecimentos práticos em:</p>
+                <ul>
+                    <li>Consumo e manipulação de APIs REST</li>
+                    <li>Desenvolvimento com abordagem Mobile First</li>
+                    <li>Implementação de layouts modernos com CSS Grid</li>
+                    <li>Boas práticas de JavaScript moderno (ES6+)</li>
+                    <li>Design responsivo e adaptativo</li>
+                </ul>
+
+                <div class="modal-actions">
+                    <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Acessar GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal MaisAbrigo API -->
+    <div id="modal-maisabrigo" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal('maisabrigo')">&times;</button>
+            <div class="modal-header">
+                <h2>MaisAbrigo API</h2>
+                <p class="modal-subtitle">Sistema de Gerenciamento de Abrigos em Emergências com IoT</p>
+            </div>
+            <div class="modal-body">
+                <h3>🎯 Sobre o Projeto</h3>
+                <p>API REST completa para gerenciamento de pessoas resgatadas e abrigos em situações de emergência. O projeto combina uma plataforma web robusta, tecnologia IoT e dashboard analítico em tempo real para apoiar a <strong>Defesa Civil</strong>, voluntários e cidadãos em momentos críticos.</p>
+                <p>Esta solução inovadora utiliza sensores IoT para monitoramento automático de ocupação e condições ambientais, proporcionando informações precisas para tomada de decisão em situações de emergência.</p>
+                
+                <h3>🚀 Funcionalidades Principais</h3>
+                
+                <p><strong>👥 Cadastro de Pessoas Resgatadas</strong></p>
+                <ul>
+                    <li>Registro completo com nome e idade</li>
+                    <li>Condições de saúde documentadas</li>
+                    <li>Associação com abrigos específicos (relacionamento 1:N)</li>
+                    <li>Histórico de localização e transferências</li>
+                </ul>
+
+                <p><strong>🏠 Gestão de Abrigos</strong></p>
+                <ul>
+                    <li>Cadastro detalhado: nome, endereço e capacidade</li>
+                    <li>Controle de recursos disponíveis (comida, água, leitos)</li>
+                    <li>Monitoramento de ocupação atual em tempo real</li>
+                    <li>Atualização automática via sensores IoT</li>
+                </ul>
+
+                <h3>📲 Integrações e Inovações</h3>
+                
+                <p><strong>📡 Internet das Coisas (IoT)</strong></p>
+                <ul>
+                    <li><strong>Sensor de Presença:</strong> Detecta entrada e saída de pessoas, atualizando automaticamente a ocupação do abrigo</li>
+                    <li><strong>Sensor de Temperatura:</strong> Monitora condições ambientais em tempo real</li>
+                    <li><strong>Protocolo MQTT:</strong> Comunicação eficiente entre dispositivos</li>
+                    <li><strong>Plataformas:</strong> Integração com Node-RED e Thinger.io</li>
+                    <li><strong>Hardware:</strong> Arduino e ESP8266 para coleta de dados</li>
+                </ul>
+
+                <p><strong>📊 Dashboard para Defesa Civil</strong></p>
+                <ul>
+                    <li>Visualização em tempo real da ocupação de cada abrigo</li>
+                    <li>Gráficos de temperatura ambiente</li>
+                    <li>Estatísticas de número de abrigados</li>
+                    <li>Alertas automáticos de capacidade máxima</li>
+                    <li>Interface intuitiva desenvolvida com Node-RED ou Thinger.io</li>
+                </ul>
+
+                <h3>🧱 Stack Tecnológica</h3>
+                <ul>
+                    <li><strong>Backend API:</strong> ASP.NET Core MVC</li>
+                    <li><strong>Banco de Dados:</strong> Oracle Database</li>
+                    <li><strong>ORM:</strong> Entity Framework Core (Code-First)</li>
+                    <li><strong>IoT:</strong> Node-RED, MQTT, Arduino, ESP8266</li>
+                    <li><strong>Dashboard:</strong> Node-RED / Thinger.io</li>
+                    <li><strong>Documentação:</strong> Swagger / OpenAPI</li>
+                    <li><strong>Views:</strong> Razor Pages + TagHelpers</li>
+                </ul>
+
+                <h3>🗄️ Arquitetura</h3>
+                <ul>
+                    <li><strong>Models:</strong> Entidades Abrigo e Pessoa com relacionamento 1:N</li>
+                    <li><strong>DTOs:</strong> Objetos de transferência para entrada e resposta da API</li>
+                    <li><strong>Controllers:</strong> Endpoints RESTful seguindo boas práticas</li>
+                    <li><strong>DbContext:</strong> Configuração EF Core com migrations</li>
+                    <li><strong>Swagger:</strong> Documentação interativa dos endpoints</li>
+                </ul>
+
+                <h3>🧪 Principais Endpoints REST</h3>
+                <ul>
+                    <li><code>GET /api/abrigo</code> - Lista todos os abrigos</li>
+                    <li><code>POST /api/abrigo</code> - Cria um novo abrigo</li>
+                    <li><code>GET /api/pessoa</code> - Lista pessoas resgatadas</li>
+                    <li><code>POST /api/pessoa</code> - Cadastra uma nova pessoa</li>
+                    <li><code>GET /api/abrigo/{id}/ocupacao</code> - Consulta ocupação em tempo real</li>
+                </ul>
+
+                <h3>💡 Impacto Social</h3>
+                <p>Este projeto foi desenvolvido com foco em auxiliar a gestão de crises humanitárias, proporcionando ferramentas tecnológicas modernas para:</p>
+                <ul>
+                    <li>Otimizar a distribuição de recursos em situações de emergência</li>
+                    <li>Facilitar o trabalho da Defesa Civil e equipes de resgate</li>
+                    <li>Garantir condições adequadas para pessoas em abrigos</li>
+                    <li>Fornecer dados precisos para tomada de decisão rápida</li>
+                </ul>
+
+                <div class="modal-actions">
+                    <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Acessar GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Leonardo Cadena. Desenvolvedor Web Júnior</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
