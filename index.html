@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonardo Cadena | Desenvolvedor Web</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/build/index.min.js"></script>
 </head>
 <body>
     <!-- ===== NAVEGAÇÃO ===== -->
@@ -14,6 +13,7 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencias">Experiência</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -73,6 +73,72 @@
                     <div class="info-item">
                         <strong>Email</strong>
                         <p>leonardocadenasza@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO EXPERIÊNCIAS ===== -->
+    <section id="experiencias" class="experiencias">
+        <div class="container">
+            <h2>Experiência Profissional</h2>
+            <div class="experiencias-timeline">
+                <!-- Experiência 1 - Desenvolvedor Web Júnior -->
+                <div class="experiencia-item">
+                    <div class="experiencia-header">
+                        <div class="experiencia-period">
+                            <span class="badge-period">ago 2025 - nov 2025</span>
+                            <span class="badge-duration">4 meses</span>
+                        </div>
+                    </div>
+                    <div class="experiencia-content">
+                        <h3>Desenvolvedor Web Júnior</h3>
+                        <p class="company">Vox Soluções em TI</p>
+                        <p class="location">📍 São Paulo, SP · Híbrida</p>
+                        <p class="description">
+                            Desenvolvimento e manutenção de aplicações web utilizando ASP.NET (MVC e WebForms), C#, Vue.js e JavaScript, com criação de interfaces responsivas em HTML, CSS e Bootstrap. Integração com bancos de dados SQL e implementação de buscas com Elasticsearch. Atuação na correção de bugs, melhorias contínuas e resolução de problemas, aplicando pensamento analítico e boas práticas de desenvolvimento.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">ASP.NET</span>
+                            <span class="tech-tag">ASP.NET MVC</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Elasticsearch</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiência 2 - Estagiário de Desenvolvimento Web -->
+                <div class="experiencia-item">
+                    <div class="experiencia-header">
+                        <div class="experiencia-period">
+                            <span class="badge-period">fev 2025 - ago 2025</span>
+                            <span class="badge-duration">7 meses</span>
+                        </div>
+                    </div>
+                    <div class="experiencia-content">
+                        <h3>Estagiário de Desenvolvimento Web</h3>
+                        <p class="company">Vox Soluções em TI</p>
+                        <p class="location">📍 São Paulo, SP</p>
+                        <p class="description">
+                            Atuação no desenvolvimento e evolução de aplicações web com ASP.NET, C#, Vue.js e JavaScript, incluindo a construção de interfaces responsivas utilizando HTML, CSS e Bootstrap. Responsável pela integração com bancos de dados SQL e pela implementação de mecanismos de busca com Elasticsearch. Participação ativa na identificação e correção de falhas, otimização de funcionalidades e resolução de problemas, seguindo boas práticas de desenvolvimento e análise técnica.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">ASP.NET</span>
+                            <span class="tech-tag">ASP.NET MVC</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Elasticsearch</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,18 +281,17 @@
             <p class="contato-subtitle">Vamos conversar sobre oportunidades e projetos interessantes!</p>
             
             <div class="contato-content">
-                <form class="formulario" id="formulario-contato">
+                <form class="formulario">
                     <div class="form-group">
-                        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                        <input type="text" placeholder="Seu Nome" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                        <input type="email" placeholder="Seu Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                    <div id="mensagem-status"></div>
                 </form>
 
                 <div class="contato-links">
