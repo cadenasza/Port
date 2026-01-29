@@ -89,6 +89,7 @@ body.dark-mode .social-link {
 /* ===== ESTILO GERAL ===== */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
