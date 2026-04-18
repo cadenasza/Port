@@ -564,6 +564,10 @@ body.dark-mode .tech-tag:hover {
     display: block;
 }
 
+.projeto-image img.pokedex-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
 .projeto-info {
     padding: 2.5rem;
     flex: 1;

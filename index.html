@@ -165,7 +165,7 @@
                             <span class="tag">OpenTelemetry</span>
                         </div>
                         <div class="projeto-links">
-                            <a href="https://github.com/cadenasza/NutriBreak" target="_blank" class="link-btn">Código</a>
+                            <a href="https://github.com/cadenasza/NutriBreak" target="_blank" rel="noopener noreferrer" class="link-btn">Código</a>
                             <button class="link-btn" onclick="abrirModal('nutribreak')">Detalhes</button>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                 <!-- Projeto 2 - Pokedex -->
                 <div class="projeto-card">
                     <div class="projeto-image">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pokedex" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pokedex" class="pokedex-bg">
                     </div>
                     <div class="projeto-info">
                         <h3>Pokedex</h3>
@@ -185,13 +185,34 @@
                             <span class="tag">PokeAPI</span>
                         </div>
                         <div class="projeto-links">
-                            <a href="https://github.com/cadenasza/dio-pokedex" target="_blank" class="link-btn">Código</a>
+                            <a href="https://github.com/cadenasza/dio-pokedex" target="_blank" rel="noopener noreferrer" class="link-btn">Código</a>
                             <button class="link-btn" onclick="abrirModal('pokedex')">Detalhes</button>
                         </div>
                     </div> 
                 </div>
 
-                <!-- Projeto 3 - MaisAbrigo API -->
+                <!-- Projeto 3 - FocusStudy -->
+                <div class="projeto-card">
+                    <div class="projeto-image">
+                        <img src="img/focusStudy.PNG" alt="FocusStudy">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>FocusStudy</h3>
+                        <p>Aplicação ASP.NET Core para manter o foco: cronômetro com metas, histórico por usuário, badges de atividade e tema claro/escuro.</p>
+                        <div class="projeto-tags">
+                            <span class="tag">.NET 8</span>
+                            <span class="tag">ASP.NET Core MVC</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/cadenasza/FocusStudy" target="_blank" rel="noopener noreferrer" class="link-btn">Código</a>
+                            <button class="link-btn" onclick="abrirModal('focusstudy')">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 - MaisAbrigo API -->
                 <div class="projeto-card">
                     <div class="projeto-image">
                         <img src="img/api.png" alt="MaisAbrigo API">
@@ -206,14 +227,14 @@
                             <span class="tag">Node-RED</span>
                         </div>
                         <div class="projeto-links">
-                            <a href="https://github.com/cadenasza/MaisAbrigo" target="_blank" class="link-btn">Código</a>
+                            <a href="https://github.com/cadenasza/MaisAbrigo" target="_blank" rel="noopener noreferrer" class="link-btn">Código</a>
                             <button class="link-btn" onclick="abrirModal('maisabrigo')">Detalhes</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="projetos-cta">
-                <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Ver Mais no GitHub</a>
+                <a href="https://github.com/cadenasza" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver Mais no GitHub</a>
             </div>
         </div>
     </section>
@@ -240,7 +261,7 @@
                     <h3>Front-End</h3>
                     <ul class="skill-list">
                         <li>JavaScript</li>
-                        <li>Vue.js</li>
+                        <li>React.js</li>
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Bootstrap</li>
@@ -297,9 +318,9 @@
                 <div class="contato-links">
                     <h3>Conecte-se Comigo</h3>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/leonardo-cadena" target="_blank" class="social-link">LinkedIn</a>
-                        <a href="https://github.com/cadenasza" target="_blank" class="social-link">GitHub</a>
-                        <a href="https://wa.me/5511933839709" target="_blank" class="social-link">WhatsApp</a>
+                        <a href="https://www.linkedin.com/in/leonardo-cadena" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/cadenasza" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                        <a href="https://wa.me/5511933839709" target="_blank" rel="noopener noreferrer" class="social-link">WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -332,7 +353,7 @@
                 </ul>
 
                 <div class="modal-actions">
-                    <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Acessar GitHub</a>
+                    <a href="https://github.com/cadenasza" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Acessar GitHub</a>
                 </div>
             </div>
         </div>
@@ -389,7 +410,43 @@
                 </ul>
 
                 <div class="modal-actions">
-                    <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Acessar GitHub</a>
+                    <a href="https://github.com/cadenasza" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Acessar GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal FocusStudy -->
+    <div id="modal-focusstudy" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal('focusstudy')">&times;</button>
+            <div class="modal-header">
+                <h2>FocusStudy</h2>
+                <p class="modal-subtitle">Cronômetro de estudo + histórico por usuário</p>
+            </div>
+            <div class="modal-body">
+                <h3>Objetivo</h3>
+                <p>Ajudar estudantes a manter o foco, acompanhar o tempo de estudo e visualizar o histórico de sessões.</p>
+
+                <h3>Principais funcionalidades</h3>
+                <ul>
+                    <li>Autenticação simples (cadastro/login/logout) com sessões por usuário</li>
+                    <li>Cronômetro circular (SVG) com meta em minutos e alarme ao concluir</li>
+                    <li>Badges por tipo de atividade e assunto/matéria opcional</li>
+                    <li>Histórico em cards com busca por assunto (contains) e layout responsivo</li>
+                    <li>Tema claro/escuro com preferência salva (dark mode preto + verde)</li>
+                </ul>
+
+                <h3>Tecnologias</h3>
+                <ul>
+                    <li><strong>.NET 8</strong> (ASP.NET Core MVC) e <strong>C#</strong></li>
+                    <li><strong>Entity Framework Core</strong> + Pomelo (MySQL)</li>
+                    <li><strong>Bootstrap 5</strong> e JavaScript (cronômetro, progresso e dark mode)</li>
+                </ul>
+
+                <div class="modal-actions">
+                    <a href="https://github.com/cadenasza" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Acessar GitHub</a>
                 </div>
             </div>
         </div>
@@ -486,7 +543,7 @@
                 </ul>
 
                 <div class="modal-actions">
-                    <a href="https://github.com/cadenasza" target="_blank" class="btn btn-primary">Acessar GitHub</a>
+                    <a href="https://github.com/cadenasza" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Acessar GitHub</a>
                 </div>
             </div>
         </div>
