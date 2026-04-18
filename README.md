@@ -58,7 +58,7 @@ Timeline com histórico profissional:
   - 7 meses de aprendizado intensivo
 
 ### 📦 **Projetos**
-Apresentação de 3 projetos principais:
+Apresentação de 4 projetos principais:
 
 #### 1. **NutriBreak API**
 Plataforma de saúde no trabalho com pausas inteligentes
@@ -73,7 +73,14 @@ Enciclopédia Pokémon interativa
 - Consumo de API REST
 - [GitHub](https://github.com/cadenasza/dio-pokedex)
 
-#### 3. **MaisAbrigo API**
+#### 3. **FocusStudy**
+Aplicação web em ASP.NET Core para ajudar estudantes a manter o foco
+- Stack: .NET 8, ASP.NET Core MVC, EF Core (MySQL), Bootstrap 5, JavaScript
+- Cronômetro com meta + progresso circular, badges de atividade, histórico por usuário e dark mode
+
+![FocusStudy](img/focusStudy.PNG)
+
+#### 4. **MaisAbrigo API**
 Sistema de gerenciamento de abrigos em emergências com IoT
 - Stack: ASP.NET Core, Oracle, Node-RED, Arduino
 - Sensores IoT para monitoramento em tempo real
@@ -122,6 +129,7 @@ Port/
 └── img/                 # Pasta de imagens
     ├── leo-12.jpeg      # Foto de perfil
     ├── NutriBreak.JPG   # Logo do projeto
+  ├── focusStudy.PNG   # Imagem do projeto
     └── api.png          # Logo do projeto
 ```
 
@@ -168,6 +176,8 @@ git clone https://github.com/cadenasza/Port.git
 
 2. Abra o arquivo `index.html` diretamente no navegador ou use um servidor local:
 ```bash
+python -m http.server 8000
+```
 
 3. Acesse `http://localhost:8000` no navegador
 
