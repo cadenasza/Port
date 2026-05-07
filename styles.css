@@ -175,12 +175,9 @@ a {
     background-color: rgba(255, 255, 255, 0.12);
 }
 
-.nav-toggle-bar {
-    display: block;
-    width: 18px;
-    height: 2px;
-    background: var(--white);
-    border-radius: 2px;
+.nav-toggle i {
+    font-size: 1.25rem;
+    color: var(--white);
 }
 
 .nav-overlay {
@@ -205,8 +202,8 @@ body.dark-mode .nav-toggle {
     color: #ffffff;
 }
 
-body.dark-mode .nav-toggle-bar {
-    background: #ffffff;
+body.dark-mode .nav-toggle i {
+    color: #ffffff;
 }
 
 body.dark-mode .nav-menu {
