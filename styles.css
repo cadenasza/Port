@@ -156,6 +156,64 @@ a {
     align-items: center;
 }
 
+.nav-toggle {
+    display: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+}
+
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 90;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Dark mode: garante contraste na navbar */
+body.dark-mode .btn-control,
+body.dark-mode .nav-toggle {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.dark-mode .nav-toggle-bar {
+    background: #ffffff;
+}
+
+body.dark-mode .nav-menu {
+    background-color: #000000;
+    border-bottom-color: #333333;
+}
+
 .btn-control {
     background-color: transparent;
     border: 2px solid var(--white);
@@ -1129,8 +1187,47 @@ body.dark-mode .certificacao-footer {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .navbar .container {
+        padding: 0.75rem 16px;
+    }
+
     .nav-menu {
-        gap: 1rem;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem 1.25rem 1.5rem;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+        z-index: 95;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 8px;
+        border-radius: 8px;
+    }
+
+    .nav-menu a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-bottom: none;
     }
 
     .hero {
@@ -1182,8 +1279,8 @@ body.dark-mode .certificacao-footer {
 
 @media (max-width: 480px) {
     .nav-menu {
-        flex-direction: column;
-        gap: 0.5rem;
+        top: 68px;
+        padding: 1rem 1rem 1.25rem;
     }
 
     .hero {

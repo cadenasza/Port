@@ -21,14 +21,44 @@ btnTema.addEventListener('click', () => {
     }
 });
 
-// ===== NAVBAR INTERATIVIDADE =====
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        // Fecha menu em mobile se estiver aberto
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.remove('active');
+// ===== NAVBAR (MENU HAMBÚRGUER) =====
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navOverlay = document.getElementById('nav-overlay');
+
+const setMenuOpen = (open) => {
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.toggle('active', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (navOverlay) navOverlay.classList.toggle('active', open);
+};
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.contains('active');
+        setMenuOpen(!isOpen);
     });
-});
+
+    // Fecha ao clicar em um link
+    navMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    // Fecha ao clicar fora
+    if (navOverlay) {
+        navOverlay.addEventListener('click', () => setMenuOpen(false));
+    }
+
+    // Fecha com ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setMenuOpen(false);
+    });
+
+    // Fecha ao redimensionar para desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) setMenuOpen(false);
+    });
+}
 
 // ===== MODAL INTERATIVIDADE =====
 function abrirModal(modalId) {
