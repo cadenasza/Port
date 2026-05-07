@@ -1,19 +1,25 @@
 # 🚀 Portfólio Leonardo Cadena
 
-Um portfólio web moderno, responsivo e interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript vanilla**. Apresenta projetos profissionais, experiências e habilidades de um Desenvolvedor Web Júnior.
+Portfólio web moderno, responsivo e interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript (Vanilla)**. Reúne **experiências**, **projetos**, **habilidades** e **certificações**, com foco em uma navegação fluida e uma interface limpa.
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-brightgreen)
 ![Versão](https://img.shields.io/badge/Versão-1.0-blue)
 ![Licença](https://img.shields.io/badge/Licença-MIT-green)
 
+## 🌐 Demo (Vercel)
+
+Acesse: **https://portfolioweb-beta-plum.vercel.app/**
+
 ## 📋 Conteúdo
 
+- [Demo (Vercel)](#-demo-vercel)
 - [Características](#características)
 - [Seções do Portfólio](#seções-do-portfólio)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Funcionalidades](#funcionalidades)
 - [Como Usar](#como-usar)
+- [Envio de Email (EmailJS)](#-envio-de-email-emailjs)
 - [Recursos](#recursos)
 - [Autor](#autor)
 - [Contato](#contato)
@@ -94,9 +100,17 @@ Categorias de competências:
 - **Ferramentas & Outros**: Git & GitHub, Elasticsearch, VS Code, Excel, Inglês Intermediário
 - **Soft Skills**: Resolução de Problemas, Trabalho em Equipe, Adaptabilidade, Proatividade
 
+### 🎓 **Cursos e Certificações**
+Destaques recentes:
+- **Nanocurso Front-End** — FIAP
+- **Nanocurso Python (80h)** — FIAP
+- **Bradesco GenAI (52h)** — DIO
+- **Formação .NET Developer (93h)** — DIO
+
 ### 📧 **Contato**
 Seção com:
-- Formulário de contato com validação
+- Formulário de contato com validação e feedback visual
+- **Envio de mensagem por email via EmailJS**
 - Links de redes sociais:
   - LinkedIn
   - GitHub
@@ -122,15 +136,16 @@ Seção com:
 
 ```
 Port/
-├── index.html           # Arquivo principal HTML
-├── styles.css           # Estilos CSS completos
-├── script.js            # Lógica JavaScript
-├── README.md            # Este arquivo
-└── img/                 # Pasta de imagens
-    ├── leo-12.jpeg      # Foto de perfil
-    ├── NutriBreak.JPG   # Logo do projeto
-  ├── focusStudy.PNG   # Imagem do projeto
-    └── api.png          # Logo do projeto
+├── index.html            # Arquivo principal HTML
+├── styles.css            # Estilos CSS
+├── script.js             # Lógica JavaScript (UI + EmailJS)
+├── README.md             # Documentação
+└── img/                  # Imagens
+    ├── leo-12.jpeg       # Foto de perfil
+    ├── NutriBreak.JPG    # Thumb do projeto
+    ├── ContactBookCerta.PNG # Thumb do ContactBookIA
+    ├── focusStudy.PNG    # Thumb do projeto
+    └── api.png           # Thumb do projeto
 ```
 
 ## 🚀 Funcionalidades
@@ -158,8 +173,9 @@ Port/
 
 ### ✔️ **Validação de Formulário**
 - Verificação de campos obrigatórios
+- Validação de e-mail
 - Feedback visual (borda vermelha/verde)
-- Alerta de sucesso ao enviar
+- Envio real de mensagem por email (EmailJS) + feedback de sucesso/erro
 
 ### 🔝 **Botão Voltar ao Topo**
 - Aparece após 300px de scroll
@@ -182,7 +198,7 @@ python -m http.server 8000
 
 ### Opção 2: Online
 - Hospede os arquivos em qualquer servidor web estático
-- Vercel: https://portfolioweb-beta-plum.vercel.app/
+- **Vercel (deploy atual):** https://portfolioweb-beta-plum.vercel.app/
 
 ## 📚 Recursos
 
@@ -239,15 +255,29 @@ Este portfólio foi desenvolvido como uma demonstração de habilidades em desen
 - Design responsivo e acessível
 - User Experience (UX) intuitiva
 
+## ✉️ Envio de Email (EmailJS)
+
+O formulário de contato envia mensagens via **EmailJS** diretamente do frontend.
+
+Se você trocar de service/template no EmailJS, ajuste os IDs em `script.js`:
+- `EMAILJS_PUBLIC_KEY`
+- `EMAILJS_SERVICE_ID`
+- `EMAILJS_TEMPLATE_ID`
+
+Variáveis esperadas no template:
+- `{{name}}`
+- `{{email}}`
+- `{{message}}`
+- `{{time}}`
+
 ## 🔄 Atualizações Futuras
 
-Planejado para versões futuras:
-- [ ] Integração com backend para envio de emails
-- [ ] Seção de certificados
-- [ ] Blog ou artigos técnicos
-- [ ] Dashboard de visualizações
-- [ ] Suporte para múltiplos idiomas
+Ideias para evoluir o portfólio:
+- [ ] Página dedicada por projeto (detalhes + prints + links)
+- [ ] i18n (PT/EN)
+- [ ] SEO básico (metas e Open Graph)
 - [ ] PWA (Progressive Web App)
+- [ ] Blog ou artigos técnicos
 
 ## 📄 Licença
 
