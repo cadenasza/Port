@@ -1234,6 +1234,13 @@ body.dark-mode .certificacao-footer {
     .hero-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .hero-label {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-title {
@@ -1242,10 +1249,23 @@ body.dark-mode .certificacao-footer {
 
     .hero-description {
         font-size: 1rem;
+        max-width: 36rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .hero-visual {
-        height: 300px;
+        height: auto;
+    }
+
+    .hero-shape {
+        width: 260px;
+        height: 260px;
     }
 
     .hero::before {
@@ -1281,7 +1301,7 @@ body.dark-mode .certificacao-footer {
     }
 
     .hero {
-        padding: 60px 0;
+        padding: 56px 0;
     }
 
     .hero-title {
@@ -1302,7 +1322,13 @@ body.dark-mode .certificacao-footer {
     }
 
     .hero-visual {
-        height: 250px;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
+    .hero-shape {
+        width: 220px;
+        height: 220px;
     }
 
     .projeto-links {
