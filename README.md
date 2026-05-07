@@ -66,12 +66,12 @@ Plataforma de saúde no trabalho com pausas inteligentes
 - Recomendações inteligentes baseadas em humor e energia
 - [GitHub](https://github.com/cadenasza/NutriBreak)
 
-#### 2. **Pokedex**
-Enciclopédia Pokémon interativa
-- Stack: HTML5, CSS3, JavaScript, PokeAPI
-- Mobile First com Grid Layout responsivo
-- Consumo de API REST
-- [GitHub](https://github.com/cadenasza/dio-pokedex)
+#### 2. **ContactBookIA**
+Gerenciador de contatos com autenticação JWT e interface moderna
+- Stack: .NET 8, Vue.js 3, MySQL, EF Core
+- CRUD com validação visual, toasts e dark/light mode
+- Isolamento de dados por usuário
+- [GitHub](https://github.com/cadenasza/ContactBookIA)
 
 #### 3. **FocusStudy**
 Aplicação web em ASP.NET Core para ajudar estudantes a manter o foco
@@ -177,7 +177,6 @@ git clone https://github.com/cadenasza/Port.git
 2. Abra o arquivo `index.html` diretamente no navegador ou use um servidor local:
 ```bash
 python -m http.server 8000
-```
 
 3. Acesse `http://localhost:8000` no navegador
 
