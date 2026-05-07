@@ -66,39 +66,104 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// ===== FORM VALIDAÇÃO E ENVIO =====
-const formulario = document.querySelector('.formulario');
+// ===== FORM CONTATO (EMAILJS) =====
+const formulario = document.getElementById('contact-form');
 
-formulario.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Pega os valores do formulário
-    const inputs = formulario.querySelectorAll('input, textarea');
-    let isValid = true;
-    
-    // Valida campos
-    inputs.forEach(input => {
-        if (input.value.trim() === '') {
-            isValid = false;
-            input.style.borderColor = '#dc3545';
-        } else {
-            input.style.borderColor = '#28a745';
+// EmailJS config
+const EMAILJS_PUBLIC_KEY = 'W_Qgp9K-0vtoOzucG';
+const EMAILJS_SERVICE_ID = 'service_7ajvvyx';
+const EMAILJS_TEMPLATE_ID = 'template_hkin8zx';
+
+const initEmailJs = () => {
+    if (!window.emailjs) {
+        console.warn('EmailJS SDK não carregou. Verifique o script no index.html.');
+        return false;
+    }
+
+    try {
+        window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+        return true;
+    } catch (err) {
+        console.error('Falha ao inicializar EmailJS:', err);
+        return false;
+    }
+};
+
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+const resetFieldStyles = (fields) => {
+    fields.forEach((field) => {
+        field.style.borderColor = '#e0e0e0';
+    });
+};
+
+if (formulario) {
+    initEmailJs();
+
+    formulario.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const fields = formulario.querySelectorAll('input:not([type="hidden"]), textarea');
+        let isValid = true;
+
+        fields.forEach((field) => {
+            const value = (field.value ?? '').trim();
+
+            if (value === '') {
+                isValid = false;
+                field.style.borderColor = '#dc3545';
+                return;
+            }
+
+            if (field.type === 'email' && !isValidEmail(value)) {
+                isValid = false;
+                field.style.borderColor = '#dc3545';
+                return;
+            }
+
+            field.style.borderColor = '#28a745';
+        });
+
+        if (!isValid) {
+            alert('Por favor, preencha todos os campos corretamente.');
+            return;
+        }
+
+        const timeInput = document.getElementById('contact-time');
+        if (timeInput) {
+            timeInput.value = new Date().toLocaleString('pt-BR');
+        }
+
+        const btnSubmit = document.getElementById('contact-submit');
+        const originalBtnText = btnSubmit?.textContent;
+
+        if (!window.emailjs) {
+            alert('Não foi possível enviar agora (EmailJS não carregou).');
+            return;
+        }
+
+        try {
+            if (btnSubmit) {
+                btnSubmit.disabled = true;
+                btnSubmit.textContent = 'Enviando...';
+            }
+
+            await window.emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formulario);
+
+            alert('Obrigado! Sua mensagem foi enviada com sucesso!');
+            formulario.reset();
+            resetFieldStyles(fields);
+        } catch (err) {
+            console.error('Erro ao enviar email:', err);
+            alert('Ops! Não foi possível enviar sua mensagem agora. Tente novamente em instantes.');
+        } finally {
+            if (btnSubmit) {
+                btnSubmit.disabled = false;
+                btnSubmit.textContent = originalBtnText || 'Enviar Mensagem';
+            }
         }
     });
-    
-    if (isValid) {
-        // Simula envio de mensagem
-        alert('Obrigado! Sua mensagem foi enviada com sucesso! 🎉');
-        formulario.reset();
-        
-        // Reseta cores dos inputs
-        inputs.forEach(input => {
-            input.style.borderColor = '#e0e0e0';
-        });
-    } else {
-        alert('Por favor, preencha todos os campos!');
-    }
-});
+}
 
 // ===== SCROLL SUAVE (Já está no CSS com scroll-behavior) =====
 // Fallback/controle extra para garantir navegação suave por âncoras
